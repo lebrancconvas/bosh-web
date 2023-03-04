@@ -15,6 +15,8 @@ import {
   Title
 } from 'solid-start'
 
+import Navbar from './components/Navbar';
+
 export default function Root() {
   return (
     <Html lang="en">
@@ -26,10 +28,7 @@ export default function Root() {
       <Body>
         <Suspense>
           <ErrorBoundary>
-            <A class="p-2" href="/">
-              Index
-            </A>
-            <A href="/about">About</A>
+            <Navbar />
             <Routes>
               <FileRoutes />
             </Routes>
